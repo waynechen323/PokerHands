@@ -58,9 +58,11 @@ class DojoTest {
 
     @Test
     fun 測儀隊() {
-        val input = "CA, HA"
+        val input = "CA, HA, CA,C4,C5"
+        val notPair = Checker().checkIsPair(input)
 
-        
+        Assert.assertFalse(notPair)
+
     }
 
 }

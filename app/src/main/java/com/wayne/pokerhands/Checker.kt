@@ -1,11 +1,35 @@
 package com.wayne.pokerhands
 
 class Checker {
-    fun checkStraightFlush(input: String): Boolean {
+    fun checkIsPair(input: String): Boolean {
+        val list = fetchCards(input);
+        checkIfAllDifferent(list)
 
-        val list: List<Card> = input.split(",").map {
+        return false
+    }
+
+    fun checkIfAllDifferent(cards: List<Card>) : Boolean {
+
+        var temp: List<String>
+//        var
+//
+//        for (card in cards) {
+//
+//            if (card.suit)
+//
+//        }
+        return false
+    }
+
+    private fun fetchCards (input: String): List<Card> {
+        return input.split(",").map {
             Card(it)
         }
+    }
+
+    fun checkStraightFlush(input: String): Boolean {
+
+        val list = fetchCards(input);
 
 
         if (isCheckFlowerSame(list)) {
