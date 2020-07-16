@@ -56,4 +56,11 @@ class DojoTest {
         Assert.assertTrue(isStraightFlush)
     }
 
+    @Test
+    fun 測儀隊() {
+        val input = "CA, HA"
+
+        
+    }
+
 }

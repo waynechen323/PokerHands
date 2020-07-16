@@ -22,13 +22,16 @@ class Checker {
 
     private fun isNumberStraightFlush(list: List<Card>): Boolean {
 
-        val numberList = mutableListOf<String>()
+        val numberList = mutableListOf<Int>()
 
         list.forEach {
 
-            numberList.add(it.point!!)
+            numberList.add(it.numberPoint!!)
         }
 
+        val sort = numberList.sorted()
+
+        return sort.last() - sort.first() == 4
 
     }
 
@@ -36,7 +39,7 @@ class Checker {
 
         var flowerTemp = list.first().suit
 
-        for (index in 1..list.count()) {
+        for (index in 1 until list.count()) {
 
             if (flowerTemp != list[index].suit) {
 

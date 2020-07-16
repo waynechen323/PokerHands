@@ -1,5 +1,7 @@
 package com.wayne.pokerhands
 
+import java.lang.Exception
+
 /**
  * Created by Wayne Chen on 2020/7/16.
  */
@@ -20,4 +22,20 @@ data class Card(
         'K' -> "K"
         else -> input[1].toString()
     }
+    val numberPoint: Int?
+        get() {
+            var int: Int? = 0
+            int = try {
+                point?.toInt()
+            } catch(e: Exception) {
+                when (point) {
+                    "A" -> 1
+                    "J" -> 11
+                    "Q" -> 12
+                    "K" -> 13
+                    else -> -1
+                }
+            }
+            return int
+        }
 }
